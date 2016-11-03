@@ -1,6 +1,8 @@
 #include <iostream>
 #include "system.h"
+#include "enums.h"
 #include <cassert>
+
 
 using namespace std;
 
@@ -39,6 +41,8 @@ void System::run(){
             listPaczkomats();
         }else if (userChoice == DELETE){
             deletePaczkomat();
+        }else if (userChoice == SEND){
+            sendPackage();
         }
 
     }while(userChoice != EXIT);
@@ -132,6 +136,46 @@ void System::deletePaczkomat(){
         paczkomat[userChoice-1] = paczkomat[freeIndex];
         paczkomat[freeIndex] = NULL;
     }
+}
+
+int System::getPackageSize(){
+    cout << "What size is your package? (0 - SMALL, 1 - MEDIUM, 2 - LARGE)" << endl;
+    int userChoice;
+    cin >> userChoice;
+    while (cin.fail() || (userChoice > LARGE || userChoice < SMALL)) {
+        cin.clear(); // put us back in 'normal' operation mode
+        cin.ignore(32767,'\n'); // and remove the bad input
+        cout  << "You have chosen unsupported option, please try again: " << endl;
+        cin >> userChoice;
+    }
+    return userChoice;
+}
+
+void System::sendPackage(){
+    cout << "Where do you want to sent the package from (choose number)?" << endl;
+    listPaczkomats();
+    int sendingPaczkomat;
+    cin >> sendingPaczkomat;
+    int package;
+    package = getPackageSize();
+    sizeOfPackage packageSize;
+    if (package == 0){
+        packageSize = SMALL;
+    }else if (package == 1){
+        packageSize = MEDIUM;
+    }else if (package ==2){
+        packageSize = LARGE;
+    }
+
+    //check if in given Paczkomat there is a free place of given size
+    //if there is a place get information where to send this package
+    cout << "Where do you want to send the package to?" << endl;
+    listPaczkomats();
+    string receiverPaczkomat;
+    cin.ignore(32767, '\n');
+    getline(cin,receiverPaczkomat);
+    Paczucha paczka(packageSize, receiverPaczkomat);
+
 }
 
 

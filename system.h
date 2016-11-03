@@ -2,6 +2,8 @@
 #define SYSTEM_H_INCLUDED
 
 #include "paczkomat.h"
+#include "paczucha.h"
+
 
 class System{
     static const int MAX_PACZKOMAT = 10;
@@ -20,7 +22,8 @@ private:
     void createPaczkomat();
     void listPaczkomats();
     void deletePaczkomat();
-
+    void sendPackage();
+    int getPackageSize();
 };
 
 #endif // SYSTEM_H_INCLUDED

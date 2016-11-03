@@ -1,5 +1,10 @@
 #include "paczucha.h"
+#include "enums.h"
+#include <iostream>
 
-Paczucha::Paczucha(sizeOfPackage packageSize, const string &receiverPaczkomat) {
+using namespace std;
 
+
+Paczucha::Paczucha(sizeOfPackage packageSize, const string &receiverPaczkomat):receiver(receiverPaczkomat),size(packageSize) {
+    cout << "Paczucha has been sent. Size: " << size << ", receiver Paczkomat: " << receiver << endl;
 }
