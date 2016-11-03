@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1476954089 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\main.cpp
+	"system.h"
+
+1478090983 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\system.cpp
+	<iostream>
+	"system.h"
+	<cassert>
+
+1477482591 c:\cpptutorials\chapter8\new folder\paczkomaty_new\system.h
+	"paczkomat.h"
+
+1478089564 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\paczkomat.cpp
+	<iostream>
+	"paczkomat.h"
+
+1478085883 c:\cpptutorials\chapter8\new folder\paczkomaty_new\paczkomat.h
+	<string>
+	<vector>
+	"skrzynka.h"
+
+1477484895 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\paczucha.cpp
+
+1478090368 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\skrzynka.cpp
+	<iostream>
+	"skrzynka.h"
+
+1478090384 c:\cpptutorials\chapter8\new folder\paczkomaty_new\skrzynka.h
+	"enums.h"
+	"paczucha.h"
+
+1478083659 c:\cpptutorials\chapter8\new folder\paczkomaty_new\enums.h
+
+1478092204 c:\cpptutorials\chapter8\new folder\paczkomaty_new\paczucha.h
+	<string>
+	"enums.h"
+
