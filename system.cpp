@@ -138,7 +138,7 @@ void System::deletePaczkomat(){
     }
 }
 
-int System::getPackageSize(){
+sizeOfPackage System::getPackageSize(){
     cout << "What size is your package? (0 - SMALL, 1 - MEDIUM, 2 - LARGE)" << endl;
     int userChoice;
     cin >> userChoice;
@@ -148,34 +148,53 @@ int System::getPackageSize(){
         cout  << "You have chosen unsupported option, please try again: " << endl;
         cin >> userChoice;
     }
-    return userChoice;
+    return static_cast<sizeOfPackage>(userChoice);
 }
 
+
+
 void System::sendPackage(){
-    cout << "Where do you want to sent the package from (choose number)?" << endl;
     listPaczkomats();
-    int sendingPaczkomat;
-    cin >> sendingPaczkomat;
-    int package;
-    package = getPackageSize();
-    sizeOfPackage packageSize;
-    if (package == 0){
-        packageSize = SMALL;
-    }else if (package == 1){
-        packageSize = MEDIUM;
-    }else if (package ==2){
-        packageSize = LARGE;
+    cout << "Where do you want to send the package to ?" << endl;
+    int receiverPaczkomat;
+    cin.ignore(32767, '\n');
+    cin >> receiverPaczkomat;
+    while (cin.fail() || (receiverPaczkomat <= 0 || receiverPaczkomat > freeIndex)) {
+        cin.clear(); // put us back in 'normal' operation mode
+        cin.ignore(32767,'\n'); // and remove the bad input
+        cout  << "You have not chosen wisely, please try again: " << endl;
+        cin >> receiverPaczkomat;
     }
+
+    sizeOfPackage packageSize = getPackageSize();
+
+
+    cout << paczkomat[receiverPaczkomat-1]->getPaczkomatId() << endl;
+
+    cout << paczkomat[receiverPaczkomat-1]->getFreeSkrzynka(packageSize) << endl;
+    int freeIndex = paczkomat[receiverPaczkomat-1]->getFreeSkrzynka(packageSize);
+    if (freeIndex != -1){
+        Paczucha newPaczka(packageSize, paczkomat[receiverPaczkomat-1]->getPaczkomatId());
+        paczkomat[receiverPaczkomat-1]->placePaczka(freeIndex, &newPaczka);
+
+
+    }else{
+        cout << "There are no free Skrzynka in Paczkomat " << paczkomat[receiverPaczkomat-1]->getPaczkomatId() << endl;
+    }
+
+
+
 
     //check if in given Paczkomat there is a free place of given size
     //if there is a place get information where to send this package
-    cout << "Where do you want to send the package to?" << endl;
-    listPaczkomats();
-    string receiverPaczkomat;
-    cin.ignore(32767, '\n');
-    getline(cin,receiverPaczkomat);
-    Paczucha paczka(packageSize, receiverPaczkomat);
+
+    //Paczucha paczka(packageSize, receiverPaczkomat);
+    //increase number of pending packages in given paczkomat
+
 
 }
+
+
+
 
 

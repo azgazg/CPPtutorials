@@ -20,7 +20,8 @@ public:
     ~Paczkomat();
     const string& getPaczkomatId(){return paczkomatId;} //?
     const int getPendingPackagesInPaczkomat(){return pendingPackages;}
-
+    int getFreeSkrzynka(sizeOfPackage size);
+    void placePaczka(int index, Paczucha *newPaczka);
 
 
 

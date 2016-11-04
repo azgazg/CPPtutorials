@@ -38,38 +38,39 @@
 1478168250 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\main.cpp
 	"system.h"
 
-1478175915 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.h
+1478256522 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.h
 	"paczkomat.h"
 	"paczucha.h"
 
-1478168250 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.h
+1478269606 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.h
 	<string>
 	<vector>
 	"skrzynka.h"
 
-1478168250 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.h
+1478269944 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.h
 	"enums.h"
 	"paczucha.h"
 
 1478175378 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\enums.h
 
-1478176528 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.h
+1478270995 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.h
 	<string>
 	"enums.h"
 
-1478168250 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.cpp
+1478269606 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.cpp
 	<iostream>
 	"paczkomat.h"
 
-1478173871 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
+1478270344 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
 	"paczucha.h"
 	"enums.h"
+	<iostream>
 
-1478168250 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
+1478270883 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
 	<iostream>
 	"skrzynka.h"
 
-1478176468 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
+1478270371 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
 	<iostream>
 	"system.h"
 	"enums.h"

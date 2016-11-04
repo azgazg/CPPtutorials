@@ -23,7 +23,7 @@ private:
     void listPaczkomats();
     void deletePaczkomat();
     void sendPackage();
-    int getPackageSize();
+    sizeOfPackage getPackageSize();
 };
 
 #endif // SYSTEM_H_INCLUDED

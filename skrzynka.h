@@ -7,10 +7,16 @@
 class Skrzynka{
     sizeOfPackage size;
     Paczucha *paczka;
+    int code;
     Skrzynka(const Skrzynka& other);
 public:
     Skrzynka(sizeOfPackage packageSize);
     ~Skrzynka();
+    sizeOfPackage getSizeOfPackage() {return size;}
+    bool isFree(){return paczka == NULL;}
+    void setPaczka(Paczucha *newPaczka);
+
+
 
 };
 

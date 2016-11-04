@@ -26,7 +26,20 @@ Paczkomat::~Paczkomat(){
 
 void Paczkomat::addSkrzynki(sizeOfPackage size){
     for (int i = 0; i < 10; i++){
-        new Skrzynka(size);
         skrzynki.push_back(new Skrzynka(size));
     }
+}
+
+int Paczkomat::getFreeSkrzynka(sizeOfPackage size){
+    for (unsigned int i = 0; i < skrzynki.size(); i++){
+        if (skrzynki[i]->getSizeOfPackage() == size && skrzynki[i]->isFree()){
+            return i;
+        }
+    }
+    return -1;
+}
+
+void Paczkomat::placePaczka(int index, Paczucha *newPaczka){
+    skrzynki[index]->setPaczka(newPaczka);
+    pendingPackages++;
 }

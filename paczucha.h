@@ -10,8 +10,10 @@ class Paczucha{
     sizeOfPackage size;
     const string receiver;
 
+
 public:
-    Paczucha(sizeOfPackage packageSize, const string &receiverPaczkomat) ;
+    Paczucha(sizeOfPackage packageSize, const string &receiver) ;
+    ~Paczucha();
 };
 
 #endif // PACZUCHA_H_INCLUDED
