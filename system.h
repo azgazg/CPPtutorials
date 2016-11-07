@@ -24,6 +24,7 @@ private:
     void deletePaczkomat();
     void sendPackage();
     sizeOfPackage getPackageSize();
+    void receivePackage();
 };
 
 #endif // SYSTEM_H_INCLUDED

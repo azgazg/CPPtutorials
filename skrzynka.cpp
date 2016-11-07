@@ -9,6 +9,9 @@ Skrzynka::Skrzynka(sizeOfPackage packageSize): size(packageSize), paczka(NULL), 
 }
 
 Skrzynka::~Skrzynka(){
+    if (paczka){
+        delete paczka;
+    }
     cout<< "Skrzynka deleted, size :" << size << endl;
 }
 

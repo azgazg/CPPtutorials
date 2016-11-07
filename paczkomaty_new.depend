@@ -38,7 +38,7 @@
 1478168250 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\main.cpp
 	"system.h"
 
-1478256522 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.h
+1478517618 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.h
 	"paczkomat.h"
 	"paczucha.h"
 
@@ -61,16 +61,16 @@
 	<iostream>
 	"paczkomat.h"
 
-1478270344 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
+1478270995 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
 	"paczucha.h"
 	"enums.h"
 	<iostream>
 
-1478270883 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
+1478512523 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
 	<iostream>
 	"skrzynka.h"
 
-1478270371 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
+1478512239 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
 	<iostream>
 	"system.h"
 	"enums.h"
