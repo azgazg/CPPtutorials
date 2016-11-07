@@ -39,7 +39,29 @@ int Paczkomat::getFreeSkrzynka(sizeOfPackage size){
     return -1;
 }
 
-void Paczkomat::placePaczka(int index, Paczucha *newPaczka){
+void Paczkomat::storePaczka(int index, Paczucha *newPaczka){
     skrzynki[index]->setPaczka(newPaczka);
     pendingPackages++;
 }
+
+int Paczkomat::getReceivingSkrzynka(int collectionCode){
+    for (unsigned int i = 0; i < skrzynki.size(); i++){
+        if (skrzynki[i]->getCode() == collectionCode){
+            return i;
+        }
+    }
+    return -1;
+}
+
+Paczucha* Paczkomat::getPaczka (int collectionCode){
+    int receivingSkrzynka = getReceivingSkrzynka(collectionCode);
+    if (receivingSkrzynka == -1){
+        cout << "Your collection code does not match any package" << endl;
+        return NULL;
+    }
+    pendingPackages--;
+    cout << "The receiving Skrzynka number is: " << receivingSkrzynka << endl;
+    return skrzynki[receivingSkrzynka]->getPaczka();
+
+}
+

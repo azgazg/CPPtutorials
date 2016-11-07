@@ -42,35 +42,35 @@
 	"paczkomat.h"
 	"paczucha.h"
 
-1478269606 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.h
+1478521647 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.h
 	<string>
 	<vector>
 	"skrzynka.h"
 
-1478269944 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.h
+1478528880 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.h
 	"enums.h"
 	"paczucha.h"
 
 1478175378 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\enums.h
 
-1478270995 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.h
+1478531436 c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.h
 	<string>
 	"enums.h"
 
-1478269606 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.cpp
+1478531242 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczkomat.cpp
 	<iostream>
 	"paczkomat.h"
 
-1478270995 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
+1478520621 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
 	"paczucha.h"
 	"enums.h"
 	<iostream>
 
-1478512523 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
+1478529236 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
 	<iostream>
 	"skrzynka.h"
 
-1478512239 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
+1478531070 source:c:\cpptutorials\chapter8\new folder\paczkomaty_new\individual_work\cpptutorials\system.cpp
 	<iostream>
 	"system.h"
 	"enums.h"

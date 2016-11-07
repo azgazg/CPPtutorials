@@ -14,6 +14,8 @@ class Paczucha{
 public:
     Paczucha(sizeOfPackage packageSize, const string &receiver) ;
     ~Paczucha();
+    const string& getReceiverId() {return receiver;}
+    sizeOfPackage getSize() {return size;}
 };
 
 #endif // PACZUCHA_H_INCLUDED

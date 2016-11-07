@@ -43,6 +43,8 @@ void System::run(){
             deletePaczkomat();
         }else if (userChoice == SEND){
             sendPackage();
+        }else if (userChoice == RECEIVE){
+            receivePackage();
         }
 
     }while(userChoice != EXIT);
@@ -178,8 +180,7 @@ void System::sendPackage(){
     int freeIndex = paczkomat[receiverPaczkomat-1]->getFreeSkrzynka(packageSize);
     if (freeIndex != -1){
         Paczucha *newPaczka = new Paczucha (packageSize, paczkomat[receiverPaczkomat-1]->getPaczkomatId());
-        //paczkomat[freeIndex++] = new Paczkomat(paczkomatId);
-        paczkomat[receiverPaczkomat-1]->placePaczka(freeIndex, newPaczka);
+        paczkomat[receiverPaczkomat-1]->storePaczka(freeIndex, newPaczka);
     }else{
         cout << "There are no free Skrzynka in Paczkomat " << paczkomat[receiverPaczkomat-1]->getPaczkomatId() << endl;
     }
@@ -188,7 +189,7 @@ void System::sendPackage(){
 
 void System::receivePackage(){
     listPaczkomats();
-    cout << "Which Paczkomat you want to receive package from?" << endl;
+    cout << "Which Paczkomat you want to collect package from?" << endl;
     int receiverPaczkomat;
     cin.ignore(32767, '\n');
     cin >> receiverPaczkomat;
@@ -198,6 +199,20 @@ void System::receivePackage(){
         cout  << "You have not chosen wisely, please try again: " << endl;
         cin >> receiverPaczkomat;
     }
+    cout << "Enter the code to collect the package" << endl;
+    int collectionCode;
+    cin.ignore(32767, '\n');
+    cin >> collectionCode;
+    Paczucha *collectedPaczka = paczkomat[receiverPaczkomat-1]->getPaczka(collectionCode);
+    if ( collectedPaczka == NULL){
+        return;
+    }
+    cout << "Package has been collected from Paczkomat: " << collectedPaczka->getReceiverId() << " Tha package size is: " <<   collectedPaczka->getSize() << endl;
+
+
+
+
+
 }
 
 

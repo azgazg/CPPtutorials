@@ -18,8 +18,15 @@ Skrzynka::~Skrzynka(){
 void Skrzynka::setPaczka(Paczucha *newPaczka){
     paczka = newPaczka;
     code = reinterpret_cast<int>(newPaczka);
-    cout << "To receive package enter the code: " << code << endl;
+    cout << "To collect the package enter the code: " << code << endl;
 }
 
 
+
+Paczucha* Skrzynka::getPaczka(){
+    Paczucha *tmpPaczka = paczka;
+    paczka = NULL;
+    code = -1;
+    return tmpPaczka;
+}
 

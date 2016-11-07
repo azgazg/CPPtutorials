@@ -15,7 +15,8 @@ public:
     sizeOfPackage getSizeOfPackage() {return size;}
     bool isFree(){return paczka == NULL;}
     void setPaczka(Paczucha *newPaczka);
-
+    int getCode(){return code;}
+    Paczucha* getPaczka();
 
 
 };

@@ -13,6 +13,7 @@ class Paczkomat{
     int pendingPackages;
     vector<Skrzynka*> skrzynki;
     void addSkrzynki(sizeOfPackage size);
+    int getReceivingSkrzynka(int collectionCode);
 
 public:
 
@@ -21,7 +22,9 @@ public:
     const string& getPaczkomatId(){return paczkomatId;} //?
     const int getPendingPackagesInPaczkomat(){return pendingPackages;}
     int getFreeSkrzynka(sizeOfPackage size);
-    void placePaczka(int index, Paczucha *newPaczka);
+    void storePaczka(int index, Paczucha *newPaczka);
+
+    Paczucha* getPaczka (int collectionCode);
 
 
 
