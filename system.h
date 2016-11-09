@@ -25,6 +25,7 @@ private:
     void sendPackage();
     sizeOfPackage getPackageSize();
     void receivePackage();
+    void listSkrzynki();
 };
 
 #endif // SYSTEM_H_INCLUDED

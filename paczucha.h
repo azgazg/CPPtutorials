@@ -16,6 +16,7 @@ public:
     ~Paczucha();
     const string& getReceiverId() {return receiver;}
     sizeOfPackage getSize() {return size;}
+    void setSize(sizeOfPackage size) {this->size = size;}
 };
 
 #endif // PACZUCHA_H_INCLUDED

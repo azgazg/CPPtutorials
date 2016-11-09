@@ -23,10 +23,10 @@ public:
     const int getPendingPackagesInPaczkomat(){return pendingPackages;}
     int getFreeSkrzynka(sizeOfPackage size);
     void storePaczka(int index, Paczucha *newPaczka);
+    int getNumberOfSkrzynki(){return skrzynki.size();}
 
     Paczucha* getPaczka (int collectionCode);
-
-
+    Skrzynka& operator[] (int index);
 
 
 };

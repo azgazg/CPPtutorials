@@ -13,6 +13,7 @@ enum {
     CREATE,
     RECEIVE,
     SEND,
+    LIST_S,
     EXIT
 };
 
@@ -45,6 +46,8 @@ void System::run(){
             sendPackage();
         }else if (userChoice == RECEIVE){
             receivePackage();
+        }else if (userChoice == LIST_S){
+            listSkrzynki();
         }
 
     }while(userChoice != EXIT);
@@ -59,7 +62,9 @@ int System::getUserChoice(){
     cout << "3 - Create a new paczkomat" << endl;
     cout << "4 - Receive a package (pending packages: " << getNoOfPendingPackages() <<  ")" << endl;
     cout << "5 - Send a package" << endl;
-    cout << "6 - Exit" << endl;
+    cout << "6 - List Skrzynki in Paczkomat" << endl;
+    cout << "7 - Exit" << endl;
+
 
     int userChoice;
     cin >> userChoice;
@@ -115,7 +120,6 @@ void System::listPaczkomats(){
     cout << "List of existing paczkomats:" << endl;
     for (int i = 0; i < freeIndex; i++){
         cout << i+1 << ") " << paczkomat[i]->getPaczkomatId() << " (pending: " << paczkomat[i]->getPendingPackagesInPaczkomat()  << ")" << endl;
-
     }
 
 
@@ -204,15 +208,37 @@ void System::receivePackage(){
     cin.ignore(32767, '\n');
     cin >> collectionCode;
     Paczucha *collectedPaczka = paczkomat[receiverPaczkomat-1]->getPaczka(collectionCode);
-    if ( collectedPaczka == NULL){
+    if (collectedPaczka == NULL){
         return;
     }
     cout << "Package has been collected from Paczkomat: " << collectedPaczka->getReceiverId() << " Tha package size is: " <<   collectedPaczka->getSize() << endl;
-
-
-
-
-
+    delete collectedPaczka;
 }
+
+void System::listSkrzynki(){
+    listPaczkomats();
+    cout << "Which Paczkomat you want to list from?" << endl;
+    int receiverPaczkomat;
+    cin.ignore(32767, '\n');
+    cin >> receiverPaczkomat;
+        while (cin.fail() || (receiverPaczkomat <= 0 || receiverPaczkomat > freeIndex)) {
+        cin.clear(); // put us back in 'normal' operation mode
+        cin.ignore(32767,'\n'); // and remove the bad input
+        cout  << "You have not chosen wisely, please try again: " << endl;
+        cin >> receiverPaczkomat;
+    }
+    Paczkomat &p = *paczkomat[receiverPaczkomat-1];
+    int numberOfSkrzynki = p.getNumberOfSkrzynki();
+    for (int i = 0; i < numberOfSkrzynki; i++){
+        cout << p.getPaczkomatId() << ": skrzynka[" << i << "] size[" << p[i].getSizeOfPackage()  << "] " ;
+        if(p[i].isFree()){
+            cout << "free";
+        }else{
+            cout << "code: " << p[i].getCode();
+        }
+        cout << endl;
+    }
+}
+
 
 

@@ -76,3 +76,44 @@
 	"enums.h"
 	<cassert>
 
+1478168250 source:c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\main.cpp
+	"system.h"
+
+1478690011 c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\system.h
+	"paczkomat.h"
+	"paczucha.h"
+
+1478698580 c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\paczkomat.h
+	<string>
+	<vector>
+	"skrzynka.h"
+
+1478701673 c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\skrzynka.h
+	"enums.h"
+	"paczucha.h"
+
+1478175378 c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\enums.h
+
+1478685004 c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\paczucha.h
+	<string>
+	"enums.h"
+
+1478701935 source:c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\paczkomat.cpp
+	<iostream>
+	"paczkomat.h"
+
+1478520621 source:c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\paczucha.cpp
+	"paczucha.h"
+	"enums.h"
+	<iostream>
+
+1478701868 source:c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\skrzynka.cpp
+	<iostream>
+	"skrzynka.h"
+
+1478699539 source:c:\cpptutorials\chapter8\paczkomaty_new\individual_work\cpptutorials\system.cpp
+	<iostream>
+	"system.h"
+	"enums.h"
+	<cassert>
+

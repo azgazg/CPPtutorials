@@ -40,7 +40,7 @@ int Paczkomat::getFreeSkrzynka(sizeOfPackage size){
 }
 
 void Paczkomat::storePaczka(int index, Paczucha *newPaczka){
-    skrzynki[index]->setPaczka(newPaczka);
+    (*skrzynki[index])>>newPaczka;
     pendingPackages++;
 }
 
@@ -61,7 +61,14 @@ Paczucha* Paczkomat::getPaczka (int collectionCode){
     }
     pendingPackages--;
     cout << "The receiving Skrzynka number is: " << receivingSkrzynka << endl;
-    return skrzynki[receivingSkrzynka]->getPaczka();
-
+    return (*skrzynki[receivingSkrzynka])--;
 }
+
+Skrzynka& Paczkomat::operator[] (int index){
+    return *skrzynki[index];
+}
+
+
+
+
 

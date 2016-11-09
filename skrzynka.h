@@ -14,9 +14,12 @@ public:
     ~Skrzynka();
     sizeOfPackage getSizeOfPackage() {return size;}
     bool isFree(){return paczka == NULL;}
-    void setPaczka(Paczucha *newPaczka);
+    //void setPaczka(Paczucha *newPaczka);
     int getCode(){return code;}
     Paczucha* getPaczka();
+    void operator>>(Paczucha *newPaczka);
+    Paczucha* operator--();
+    Paczucha* operator--(int);
 
 
 };
