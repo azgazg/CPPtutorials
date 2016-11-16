@@ -12,7 +12,7 @@ Skrzynka::~Skrzynka(){
     if (paczka){
         delete paczka;
     }
-    cout<< "Skrzynka deleted, size :" << size << endl;
+    //cout<< "Skrzynka deleted, size :" << size << endl;
 }
 
 /*void Skrzynka::setPaczka(Paczucha *newPaczka){
@@ -20,8 +20,6 @@ Skrzynka::~Skrzynka(){
     code = reinterpret_cast<int>(newPaczka);
     cout << "To collect the package enter the code: " << code << endl;
 }*/
-
-
 
 Paczucha* Skrzynka::getPaczka(){
     Paczucha *tmpPaczka = paczka;
@@ -35,8 +33,6 @@ void Skrzynka::operator>> (Paczucha* newPaczka){
     code = reinterpret_cast<int>(newPaczka);
     cout << "To collect the package enter the code: " << code << endl;
 }
-
-
 
 Paczucha* Skrzynka::operator--(){
     Paczucha *tmpPaczka = paczka;

@@ -6,14 +6,12 @@ using namespace std;
 
 
 
-Paczkomat::Paczkomat(const string &paczkomatId): paczkomatId(paczkomatId), pendingPackages(0){
-    cout << skrzynki.size() << endl;
-    addSkrzynki(SMALL);
-    addSkrzynki(MEDIUM);
-    addSkrzynki(LARGE);
+Paczkomat::Paczkomat(const string &paczkomatId, int noOfSmall, int noOfMedium, int noOfLarge): paczkomatId(paczkomatId), pendingPackages(0){
 
-    cout << skrzynki.size() << endl;
-
+    addSkrzynki(SMALL, noOfSmall);
+    addSkrzynki(MEDIUM, noOfMedium);
+    addSkrzynki(LARGE, noOfLarge);
+    //cout << skrzynki.size() << endl;
     cout << "Paczkomat constructed. Name: " << paczkomatId << endl;
 }
 
@@ -24,8 +22,8 @@ Paczkomat::~Paczkomat(){
     cout << "Paczkomat destructed" << endl;
 }
 
-void Paczkomat::addSkrzynki(sizeOfPackage size){
-    for (int i = 0; i < 10; i++){
+void Paczkomat::addSkrzynki(sizeOfPackage size, int noOfSkrzynki){
+    for (int i = 0; i < noOfSkrzynki; i++){
         skrzynki.push_back(new Skrzynka(size));
     }
 }
@@ -68,7 +66,15 @@ Skrzynka& Paczkomat::operator[] (int index){
     return *skrzynki[index];
 }
 
-
+int Paczkomat::getNumberOfSkrzynkiInSize (sizeOfPackage size){
+    int countSkrzynki = 0;
+    for (unsigned int i = 0; i < skrzynki.size(); i++){
+        if (skrzynki[i]->getSizeOfPackage() == size){
+             countSkrzynki++;
+        }
+    }
+    return countSkrzynki;
+}
 
 
 

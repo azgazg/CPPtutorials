@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="c:\LDZ.txt c:\WAW.txt C:\CPPtutorials\Chapter8\paczkomaty_new\individual_work\CPPtutorials\new.txt" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
